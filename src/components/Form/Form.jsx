@@ -14,7 +14,7 @@ export default function Form() {
   }
   
   const deleteComment = (index) => {
-    setComments(comments.splice(index, 1))
+    comments.splice(index, 1) 
   }  
 
   return (
