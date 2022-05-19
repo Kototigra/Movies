@@ -8,8 +8,7 @@ export const getMoviesList = (movies) => ({
 
 export const THUNK_getMoviesList = () => async (dispatch) => {
   let randomPageNumber = Math.ceil(Math.random() * 2000)
-  console.log(randomPageNumber)
-  const response = await fetch(`https://yts.mx/api/v2/list_movies.json?limit=15&page=${randomPageNumber}`)
+  const response = await fetch(`https://yts.mx/api/v2/list_movies.json?limit=16&page=${randomPageNumber}`)
   if (response.status === 200) {
     const moviesInfo = await response.json()
     const movies = moviesInfo.data.movies

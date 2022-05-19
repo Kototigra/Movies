@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  height: 95vh;
+  height: 70vh;
   background-image: linear-gradient(
     to right bottom, 
     rgba(195, 195, 195, 0.8),
@@ -29,7 +29,7 @@ body {
     url('../background_img_header.jpeg');
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); 
+  clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 90%); 
   position: relative;
 }
 
@@ -50,7 +50,7 @@ body {
 
 .headind-primary--text {
   display: block;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 600;
   letter-spacing: 2rem;
   animation-name: moveInLeft;
@@ -129,9 +129,124 @@ body {
 }
 
 .movies-list {
-  background-color: #acac;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
   width: 95vw;
-  margin-top: 2rem;
 }
 
-.movie {}
+.movie {
+  width: 70%;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+
+.movie__img {
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.movie__title {
+  color: #000;
+  font-size: larger;
+  font-weight: bolder; 
+}
+
+.movie__rating {
+  width: 4rem;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 7rem;
+  left: -2rem;
+  color: #fff;  
+  margin-left: 1rem;
+}
+
+.movie__info {
+  margin: 1rem 0 0 2rem;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  color:#fff;
+  text-decoration: none;
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(229, 183, 97);
+  text-align: center;
+  margin: 0 1rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.page:hover {
+  background-color: rgb(165, 120, 36);
+}
+
+.movie:hover {
+  transform: translateY(-.3rem);
+  box-shadow: 0 .5rem 3rem rgba(0,0,0,.2);
+}
+
+.form__addBtn{
+  width: 6rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 186, 57);
+  margin-left: 1rem;
+}
+
+.form__input{
+  display: inline-block;
+  width: 20rem;
+  height: 2.7rem;
+  border: #777 solid 1px;
+  border-radius: 5px;
+}
+
+
+.comment {
+  width: 90%;  
+}
+
+.comment__text {
+  display: inline-block;
+  text-align: justify;
+}
+
+.comment__deleteBtn {
+  margin-top: 0.5rem;
+  float: right;
+  border: none;
+  background-color: rgba(143, 10, 10, 0.877);;
+  color: rgba(255, 255, 255);
+  font-weight: 900;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+
+.form__lable {
+  display: block;
+  font-size: larger;
+  color: rgb(255, 186, 57);
+}
+
+.form {
+  margin-top: 4rem;
+}

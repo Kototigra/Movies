@@ -9,8 +9,8 @@ export default function Pagination({moviesPerPage, allMovies, paginate}) {
   }
 
   return (
-    <div>
-      {pageNumbers.map(number => (<a href='#' key={number} onClick={() => {paginate(number)}}>{number}</a>))}
+    <div className='pagination'>
+      {pageNumbers.map(number => (<a href='#movies-list' className='page' key={number} onClick={() => {paginate(number)}}>{number}</a>))}
     </div>
   )
 }
